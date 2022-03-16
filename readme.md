@@ -21,12 +21,12 @@
 
 <h2>Telas do jogo</h2>
 
-| Nome da Tela        | Imagem                              |
-|:--------------------|:------------------------------------|
-| `TitleScreen`       | <img src="TitleScreen.png">         | 
-| `OptionsScreen`     | <img src="OptionsScreen.png">       | 
-| `Scoreboard`        | <img src="ScoreBoard.png">          | 
-| `NewGameScreen`     | <img src="NewGameScreen.png">       | 
-| `NextLevelScreen`   | <img src="NextLevel.png">     |
-| `SubmitScoreScreen` | <img src="SubmitScoreScreen.png">   |
-| `GameScreen`        | <img src="GameScreen.png">          |
+| Nome da Tela        | Imagem                                         |
+|:--------------------|:-----------------------------------------------|
+| `TitleScreen`       | <img width="400" src="TitleScreen.png">        | 
+| `OptionsScreen`     | <img width="400" src="OptionsScreen.png">      | 
+| `Scoreboard`        | <img width="400" src="ScoreBoard.png">         | 
+| `NewGameScreen`     | <img width="400" src="NewGameScreen.png">      | 
+| `NextLevelScreen`   | <img width="400" src="NextLevel.png">          |
+| `SubmitScoreScreen` | <img width="400" src="SubmitScoreScreen.png">  |
+| `GameScreen`        | <img width="400" src="GameScreen.png">         |
