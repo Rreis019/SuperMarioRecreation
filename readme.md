@@ -27,6 +27,6 @@
 | `OptionsScreen`     | <img src="OptionsScreen.png">       | 
 | `Scoreboard`        | <img src="ScoreBoard.png">          | 
 | `NewGameScreen`     | <img src="NewGameScreen.png">       | 
-| `NextLevelScreen`   | <img src="NextLevelScreen.png">     |
+| `NextLevelScreen`   | <img src="NextLevel.png">     |
 | `SubmitScoreScreen` | <img src="SubmitScoreScreen.png">   |
 | `GameScreen`        | <img src="GameScreen.png">          |
