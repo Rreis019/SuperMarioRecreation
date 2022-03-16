@@ -1,0 +1,4 @@
+Width = 16
+Height = 16
+TransparentColor = 0,108,248
+Margin = 1

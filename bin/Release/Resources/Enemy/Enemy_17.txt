@@ -1,0 +1,4 @@
+Width = 32
+Height = 32
+TransparentColor = 0,0,0
+Margin = 1
