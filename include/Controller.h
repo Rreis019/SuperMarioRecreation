@@ -30,7 +30,6 @@ class Controller : public LivingEnt
         //0 -> left 1 -> right
         int currentDir = 0;
         
-
         //FLAGS
         bool isJumping = false;
         bool isFreeze = false;

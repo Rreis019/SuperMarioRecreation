@@ -135,29 +135,32 @@ void Controller::onUpdate()
         
     }
 
-    bool canAttack = false;
-    if(controls->attack == SDL_BUTTON_LEFT){canAttack = isLeftButtonDown();}
-    else{
-        canAttack = isKeyDown(controls->attack);
-    }
-    if(canAttack && timeShoot <= 0 && this->controllerSize == ControllerSizes::CFIRE)
+    if(!this->isFreeze)
     {
-        int dir = 0;
-        if(this->flip == SDL_FLIP_HORIZONTAL){dir = -1;}
-        else{dir = 1;}
+        bool canAttack = false;
+        if(controls->attack == SDL_BUTTON_LEFT){canAttack = isLeftButtonDown();}
+        else{
+            canAttack = isKeyDown(controls->attack);
+        }
+        if(canAttack && timeShoot <= 0 && this->controllerSize == ControllerSizes::CFIRE)
+        {
+            int dir = 0;
+            if(this->flip == SDL_FLIP_HORIZONTAL){dir = -1;}
+            else{dir = 1;}
 
-        Fireball* fireball = new Fireball(&effectsSprites[0], dir);
-        fireball->pos.x =  this->pos.x + (this->coliders[0].size.x/2);
-        fireball->pos.y =  this->pos.y + (this->coliders[0].size.y/2);
-        world.addEntity(fireball);
-        timeShoot = DELAY_TO_SHOOT;
-        animationShootTime = 0.1f;
-        soundManager.playSFX("Fireball.wav");
+            Fireball* fireball = new Fireball(&effectsSprites[0], dir);
+            fireball->pos.x =  this->pos.x + (this->coliders[0].size.x/2);
+            fireball->pos.y =  this->pos.y + (this->coliders[0].size.y/2);
+            world.addEntity(fireball);
+            timeShoot = DELAY_TO_SHOOT;
+            animationShootTime = 0.1f;
+            soundManager.playSFX("Fireball.wav");
+        }
+
+        if(timeShoot >= 0){timeShoot -= timer.deltaTime;}
+        if(animationShootTime >= 0){animationShootTime -= timer.deltaTime;}
+        if(animationShootTime > 0){this->changeSprite(10);}
     }
-
-    if(timeShoot >= 0){timeShoot -= timer.deltaTime;}
-    if(animationShootTime >= 0){animationShootTime -= timer.deltaTime;}
-    if(animationShootTime > 0){this->changeSprite(10);}
 
 }
 

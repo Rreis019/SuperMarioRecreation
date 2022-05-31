@@ -2,13 +2,15 @@
 #include <stdio.h>
 #include <Windows.h>
 
-#define DEBUG_MODE
+//#define DEBUG_MODE
 
 void initLogger()
 {
     #ifdef DEBUG_MODE
         AllocConsole();
         freopen("CONOUT$", "w", stdout);
+    #else
+        FreeConsole();
     #endif
 }
 
