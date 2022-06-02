@@ -11,6 +11,8 @@
 #include "GameOverScreen.h"
 #include "ScoreBoardSelection.h"
 #include "SubmitScoreScreen.h"
+#include "ControlsScreen.h"
+#include "PlayerControlsScreen.h"
 
 ScreenManager screenManager;
 
@@ -25,6 +27,8 @@ ScreenManager::ScreenManager()
     screens.push_back(new GameOverScreen());
     screens.push_back(new ScoreBoardSelection());
     screens.push_back(new SubmitScoreScreen());
+    screens.push_back(new ControlsScreen());
+    screens.push_back(new PlayerControlsScreen());
 }
 
 ScreenManager::~ScreenManager(){}

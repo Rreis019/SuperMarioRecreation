@@ -15,6 +15,8 @@ enum EScreen
     GAME_OVER_SCREEN,
     SCOREBOARD_SELECTION_SCREEN,
     SUBMIT_SCORE_SCREEN,
+    INPUT_CONTROLS_SCREEN,
+    PLAYER_CONTROLS_SCREEN,
 };
 
 class ScreenManager
@@ -30,7 +32,7 @@ public:
 private:
     std::vector<BaseScreen*> screens;
     EScreen nextScreen = EScreen::SCREEN_NONE;
-    EScreen currentScreen = TITLE_SCREEN;
+    EScreen currentScreen = CONTROL_SCREEN;
 
 };
 

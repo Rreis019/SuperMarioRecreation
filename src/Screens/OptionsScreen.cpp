@@ -22,3 +22,9 @@ void OptionsScreen::render()
 
 	keyGui.end();
 }
+
+void OptionsScreen::onChangeScene()
+{
+	
+}
+//  keyGui = KeyGui(&defaultFont,& screenManager.sprites[1],0,20);

@@ -1,0 +1,68 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make.exe: Entering directory 'c:/Users/Rodrgio/Documents/programa��o/SuperMarioRecreation'
+g++ -o src/main.o -c src/main.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/ScoreSave.o -c src/ScoreSave.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+ 
+g++ -o src/Logger.o -c src/Logger.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Config.o -c src/Config.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Vec2.o -c src/Vec2.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Utils.o -c src/Utils.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/ScrollBackground.o -c src/ScrollBackground.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/SaveSystem.o -c src/SaveSystem.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Core/SoundManager.o -c src/Core/SoundManager.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+ 
+g++ -o src/Core/Sprite.o -c src/Core/Sprite.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Core/Drawings.o -c src/Core/Drawings.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Core/Game.o -c src/Core/Game.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Core/Timer.o -c src/Core/Timer.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Core/Input.o -c src/Core/Input.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Screens/ScoreBoardScreen.o -c src/Screens/ScoreBoardScreen.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Screens/SubmitScoreScreen.o -c src/Screens/SubmitScoreScreen.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Screens/GameOverScreen.o -c src/Screens/GameOverScreen.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Screens/GameScreen.o -c src/Screens/GameScreen.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Screens/OptionsScreen.o -c src/Screens/OptionsScreen.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Screens/ScreenManager.o -c src/Screens/ScreenManager.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Screens/ScoreBoardSelection.o -c src/Screens/ScoreBoardSelection.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Screens/NewGameScreen.o -c src/Screens/NewGameScreen.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Screens/NextLevelScreen.o -c src/Screens/NextLevelScreen.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Screens/TitleScreen.o -c src/Screens/TitleScreen.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/GUI/Button.o -c src/GUI/Button.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/GUI/Hud.o -c src/GUI/Hud.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/GUI/CustomFont.o -c src/GUI/CustomFont.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/GUI/TextBox.o -c src/GUI/TextBox.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/GUI/Table.o -c src/GUI/Table.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/GUI/KeyGui.o -c src/GUI/KeyGui.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/InvisibleBlock.o -c src/Entities/InvisibleBlock.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/Koopa.o -c src/Entities/Koopa.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/Coin.o -c src/Entities/Coin.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/Flag.o -c src/Entities/Flag.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/Ent.o -c src/Entities/Ent.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/Mushroom.o -c src/Entities/Mushroom.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/LevelManager.o -c src/Entities/LevelManager.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/Toad.o -c src/Entities/Toad.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/MysteryBox.o -c src/Entities/MysteryBox.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/Flower.o -c src/Entities/Flower.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/Goomba.o -c src/Entities/Goomba.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/World.o -c src/Entities/World.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/Axe.o -c src/Entities/Axe.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/Particle.o -c src/Entities/Particle.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/Shell.o -c src/Entities/Shell.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/FireballBowser.o -c src/Entities/FireballBowser.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/Camera.o -c src/Entities/Camera.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/Prefabs.o -c src/Entities/Prefabs.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/Bricks.o -c src/Entities/Bricks.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/Bowser.o -c src/Entities/Bowser.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/FireBallChain.o -c src/Entities/FireBallChain.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/Sack.o -c src/Entities/Sack.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/CarnPlant.o -c src/Entities/CarnPlant.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/Lava.o -c src/Entities/Lava.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/LivingEnt.o -c src/Entities/LivingEnt.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/Fireball.o -c src/Entities/Fireball.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/Teleport.o -c src/Entities/Teleport.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/Controller.o -c src/Entities/Controller.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++ -o src/Entities/MovingPlatform.o -c src/Entities/MovingPlatform.cpp -IC:/mingw64/include -Wall  -Iinclude -O3
+g++   src/main.o src/ScoreSave.o src/Logger.o src/Config.o src/Vec2.o src/Utils.o src/ScrollBackground.o src/SaveSystem.o src/Core/SoundManager.o src/Core/Sprite.o src/Core/Drawings.o src/Core/Game.o src/Core/Timer.o src/Core/Input.o src/Screens/ScoreBoardScreen.o src/Screens/SubmitScoreScreen.o src/Screens/GameOverScreen.o src/Screens/GameScreen.o src/Screens/OptionsScreen.o src/Screens/ScreenManager.o src/Screens/ScoreBoardSelection.o src/Screens/NewGameScreen.o src/Screens/NextLevelScreen.o src/Screens/TitleScreen.o src/GUI/Button.o src/GUI/Hud.o src/GUI/CustomFont.o src/GUI/TextBox.o src/GUI/Table.o src/GUI/KeyGui.o src/Entities/InvisibleBlock.o src/Entities/Koopa.o src/Entities/Coin.o src/Entities/Flag.o src/Entities/Ent.o src/Entities/Mushroom.o src/Entities/LevelManager.o src/Entities/Toad.o src/Entities/MysteryBox.o src/Entities/Flower.o src/Entities/Goomba.o src/Entities/World.o src/Entities/Axe.o src/Entities/Particle.o src/Entities/Shell.o src/Entities/FireballBowser.o src/Entities/Camera.o src/Entities/Prefabs.o src/Entities/Bricks.o src/Entities/Bowser.o src/Entities/FireBallChain.o src/Entities/Sack.o src/Entities/CarnPlant.o src/Entities/Lava.o src/Entities/LivingEnt.o src/Entities/Fireball.o src/Entities/Teleport.o src/Entities/Controller.o src/Entities/MovingPlatform.o -LC:/mingw64/lib   -lmingw32 -lSDL2main -lSDL2_image -lSDL2_mixer -lSDL2_ttf -lSDL2 -lws2_32  -static-libstdc++ -static-libgcc  -s  -o  bin/Release/SuperMario.exe
+ 
+bin/Release/SuperMario.exe
+make.exe: Leaving directory 'c:/Users/Rodrgio/Documents/programa��o/SuperMarioRecreation'
+ 

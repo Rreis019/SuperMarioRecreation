@@ -46,7 +46,8 @@ bool  KeyGui::button(std::string text)
 			result = true;
 
 		if(this->icon != nullptr){
-		icon->draw(menuX + totalMarginX + iconX, menuY + totalMarginY);}
+		icon->draw(menuX + totalMarginX + iconX, menuY + totalMarginY);
+		}
 	}
 
 	itemIndex++;
