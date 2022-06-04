@@ -60,7 +60,10 @@
         "xlocbuf": "cpp",
         "xlocmon": "cpp",
         "xloctime": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "mutex": "cpp",
+        "stop_token": "cpp",
+        "thread": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

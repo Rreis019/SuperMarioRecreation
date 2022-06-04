@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <Windows.h>
 
-//#define DEBUG_MODE
+#define DEBUG_MODE
 
 void initLogger()
 {

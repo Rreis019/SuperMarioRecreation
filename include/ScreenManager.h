@@ -17,6 +17,8 @@ enum EScreen
     SUBMIT_SCORE_SCREEN,
     INPUT_CONTROLS_SCREEN,
     PLAYER_CONTROLS_SCREEN,
+    VIDEO_SCREEN,
+    AUDIO_SCREEN
 };
 
 class ScreenManager

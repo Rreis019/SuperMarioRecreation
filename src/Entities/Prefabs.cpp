@@ -142,9 +142,6 @@ void loadPrefabs()
 	prefabs.push_back(new Axe(&blockSprites[94]));//Machado
 
 	prefabs.push_back(new Sack(&enemySprites[54]));//Sack that contain TOAD
-
-
-
 }
 
 

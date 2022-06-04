@@ -11,10 +11,12 @@
 #include "SoundManager.h"
 #include "Logger.h"
 #include "ScoreSave.h"
+#include "Utils.h"
 
 #define WINDOW_WITDH 384 // 384 * 5 = 1920
 #define WINDOW_HEIGHT 224// 216 * 5 = 1080
 #define GAME_TITLE "Super mario made by :  Rodrigo Reis"
+#define PATH_ICON "Resources/WindowIcon.png"
 
 Game game;
 SDL_Renderer* renderer;
@@ -95,6 +97,17 @@ void Game::loop()
     hud.init();
     world.init();
     screenManager.getCurrentScreen()->onChangeScene();
+
+    //SET ICON
+    if(fileExists(PATH_ICON))
+    {
+        SDL_Surface* iconSurface = IMG_Load(PATH_ICON);
+        SDL_SetColorKey(iconSurface, SDL_TRUE, SDL_MapRGB(iconSurface->format, 147, 187, 236));
+        SDL_SetWindowIcon(window,iconSurface);
+        SDL_FreeSurface(iconSurface);
+    }
+
+    
     while (isRunning)   
     {
         timer.tick(60);

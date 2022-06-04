@@ -1,4 +1,6 @@
 #include "KeyGui.h"
+#include "Logger.h"
+#include "Input.h"
 
 KeyGui keyGui;
 
@@ -139,17 +141,85 @@ void  KeyGui::events(SDL_Event events)
 		else if (events.key.keysym.sym == SDLK_RIGHT)
 			pressedRight = true;
 
-		if (events.key.keysym.sym == SDLK_DOWN)
-			currentIndex++;
-		else if (events.key.keysym.sym == SDLK_UP)
-			currentIndex--;
+		if(!selectedInputKey)
+		{
+			if (events.key.keysym.sym == SDLK_DOWN)
+				currentIndex++;
+			else if (events.key.keysym.sym == SDLK_UP)
+				currentIndex--;
 
-		if (currentIndex > totalItems - 1)
-			currentIndex = 0;
-		else if (currentIndex < 0)
-			currentIndex = totalItems - 1;
+			if (currentIndex > totalItems - 1)
+				currentIndex = 0;
+			else if (currentIndex < 0)
+				currentIndex = totalItems - 1;
+		}
+		else{
+			newKey = events.key.keysym.scancode;
+			//log("newKey: %d\n",newKey);
+		}
+
+
 	}
 }
+
+
+bool KeyGui::inputKey(std::string text,int &key)
+{
+	char uppercase[32];
+	if(key == 1){
+		strcpy(uppercase, "MOUSE1");
+	}else{
+		const char* keyStr =SDL_GetKeyName(SDL_SCANCODE_TO_KEYCODE(key));
+		strcpy(uppercase,keyStr);
+	}
+	//uppercase down
+	for (int i = 0; i < strlen(uppercase); i++){
+		uppercase[i] = toupper(uppercase[i]);
+	}
+
+
+	
+	//	std::string displayText = text + " " + uppercase;
+		currentFont->draw(menuX + totalMarginX, menuY + totalMarginY, text);
+	
+	//flickering text when is selected
+
+	bool isHover = showSelected && currentIndex == itemIndex && selectedInputKey;
+
+	if(!isHover){
+		currentFont->draw(menuX + totalMarginX + currentFont->getTextW(text) + 5, menuY + totalMarginY, uppercase);
+	}
+	//}
+
+	if (currentIndex == itemIndex)
+	{
+		if(selectedInputKey && newKey != -1){
+			selectedInputKey = false;
+			key = newKey;
+			log("newKey: %d\n",key);
+			newKey = -1;
+		}
+
+		if(SDL_GetTicks64() - selectedTimeInputKey > 1000){
+			selectedTimeInputKey = SDL_GetTicks64();
+			showSelected = !showSelected;
+		}
+
+		if (isKeyPressed(SDL_SCANCODE_RETURN)){
+			selectedInputKey = true;
+		}
+
+		if(this->icon != nullptr){
+			icon->draw(menuX + totalMarginX + iconX, menuY + totalMarginY);
+		}
+	}
+
+	itemIndex++;
+	totalMarginX += marginX;
+	totalMarginY += marginY;
+	return true;
+}
+
 
 void KeyGui::end()
 {

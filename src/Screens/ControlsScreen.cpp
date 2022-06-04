@@ -15,7 +15,6 @@ void ControlsScreen::render()
     screenManager.sprites[0].draw(110,15);
     keyGui.begin(150, 115);
 
-    printf("%d\n", keyGui.currentIndex);
 
     if(keyGui.button("1 PLAYER"))
     {

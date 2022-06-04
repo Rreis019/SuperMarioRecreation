@@ -16,8 +16,8 @@ void OptionsScreen::render()
     keyGui.begin(150, 115);
 		//if (keyGui.toggle("FULLSCREEN", &game.isFullscreen)) { game.setFullscreen(game.isFullscreen);}
 		if (keyGui.button("CONTROLS")){screenManager.changeScreen(INPUT_CONTROLS_SCREEN);}
-		if (keyGui.button("VIDEO")){screenManager.changeScreen(INPUT_CONTROLS_SCREEN);}
-		if (keyGui.button("AUDIO")){screenManager.changeScreen(INPUT_CONTROLS_SCREEN);}
+		if (keyGui.button("VIDEO")){screenManager.changeScreen(VIDEO_SCREEN);}
+		if (keyGui.button("AUDIO")){screenManager.changeScreen(AUDIO_SCREEN);}
 		//if (keyGui.numericInt("SCALE",&game.scale, 1, 5)){game.setScale(game.scale);}
 		//if (keyGui.numericInt("MUSIC",&soundManager.musicVolume, 0, MAX_VOLUME)) { soundManager.setMusicVolume(soundManager.musicVolume); }
 		//if(keyGui.numericInt("SFX", &soundManager.sfxVolume,0,MAX_VOLUME)) { soundManager.setSFXVolume(soundManager.sfxVolume); }

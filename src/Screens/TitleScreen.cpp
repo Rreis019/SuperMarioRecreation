@@ -15,13 +15,13 @@ void TitleScreen::render()
 {
     world.render();
     screenManager.sprites[0].draw(110,15);
-    keyGui.begin(150, 125);
+    keyGui.begin(150, 115);
 
     if(keyGui.button("1 PLAYER GAME")) { world.maxPlayers = 1; screenManager.changeScreen(NEW_GAME_SCREEN); }
     if(keyGui.button("2 PLAYER GAME")) { world.maxPlayers = 2; screenManager.changeScreen(NEW_GAME_SCREEN);}
     if(keyGui.button("SCOREBOARD")) { screenManager.changeScreen(SCOREBOARD_SELECTION_SCREEN); }
     if(keyGui.button("OPTIONS")) { screenManager.changeScreen(OPTIONS_SCREEN); }
-
+    if(keyGui.button("EXIT")) { game.isRunning = false; }
     keyGui.end();
 }
 void TitleScreen::onChangeScene()

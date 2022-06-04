@@ -25,6 +25,8 @@ public:
 
 	bool button(std::string text);
 
+	bool inputKey(std::string text,int &key);
+
 	bool toggle(std::string text, bool* enable);
 
 	bool numericInt(std::string text, int* num, int minN, int maxN);
@@ -42,6 +44,12 @@ private:
 	bool pressedEnter = false;
 	bool pressedLeft = false;
 	bool pressedRight = false;
+
+
+	bool selectedInputKey = false;
+	int selectedTimeInputKey = 0;
+	bool showSelected = false;
+	int newKey = -1;
 };
 
 extern KeyGui keyGui;

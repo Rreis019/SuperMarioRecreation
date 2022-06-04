@@ -13,6 +13,8 @@
 #include "SubmitScoreScreen.h"
 #include "ControlsScreen.h"
 #include "PlayerControlsScreen.h"
+#include "VideoScreen.h"
+#include "AudioScreen.h"
 
 ScreenManager screenManager;
 
@@ -29,6 +31,8 @@ ScreenManager::ScreenManager()
     screens.push_back(new SubmitScoreScreen());
     screens.push_back(new ControlsScreen());
     screens.push_back(new PlayerControlsScreen());
+    screens.push_back(new VideoScreen());
+    screens.push_back(new AudioScreen());
 }
 
 ScreenManager::~ScreenManager(){}
