@@ -2,6 +2,7 @@
 #include "World.h"
 #include "KeyGui.h"
 #include "ScreenManager.h"
+#include "PlayerControlsScreen.h"
 
 void ControlsScreen::events(SDL_Event events)
 {
@@ -14,17 +15,25 @@ void ControlsScreen::render()
     screenManager.sprites[0].draw(110,15);
     keyGui.begin(150, 115);
 
+    printf("%d\n", keyGui.currentIndex);
+
     if(keyGui.button("1 PLAYER"))
     {
-
+        playerControlsIndex = 0;
+        screenManager.changeScreen(PLAYER_CONTROLS_SCREEN);
     }
 
 
     if(keyGui.button("2 PLAYER"))
     {
-
+        playerControlsIndex = 1;
+        screenManager.changeScreen(PLAYER_CONTROLS_SCREEN);
     }
 
+    if(keyGui.button("BACK"))
+    {
+        screenManager.changeScreen(OPTIONS_SCREEN);
+    }
 
 
     keyGui.end();
@@ -32,5 +41,7 @@ void ControlsScreen::render()
 
 void ControlsScreen::onChangeScene()
 {
-    keyGui = KeyGui(&defaultFont,& screenManager.sprites[1],0,20);
+    
+    keyGui.currentIndex = 0;
+
 }

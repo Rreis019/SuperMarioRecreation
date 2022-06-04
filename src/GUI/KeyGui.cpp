@@ -17,6 +17,8 @@ void KeyGui::begin(int x, int y)
 	menuY = y;
 	totalItems = 0;
 	itemIndex = 0;
+	totalMarginX = 0;
+	totalMarginY = 0;
 
 }
 
@@ -46,7 +48,7 @@ bool  KeyGui::button(std::string text)
 			result = true;
 
 		if(this->icon != nullptr){
-		icon->draw(menuX + totalMarginX + iconX, menuY + totalMarginY);
+			icon->draw(menuX + totalMarginX + iconX, menuY + totalMarginY);
 		}
 	}
 

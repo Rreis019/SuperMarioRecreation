@@ -9,3 +9,5 @@ public:
 	void onChangeScene();
 private:
 };
+
+extern int playerControlsIndex;

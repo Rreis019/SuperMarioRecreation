@@ -32,7 +32,7 @@ public:
 private:
     std::vector<BaseScreen*> screens;
     EScreen nextScreen = EScreen::SCREEN_NONE;
-    EScreen currentScreen = CONTROL_SCREEN;
+    EScreen currentScreen = TITLE_SCREEN;
 
 };
 
