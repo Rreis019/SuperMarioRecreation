@@ -22,7 +22,7 @@ std::vector<ScoreSaveData> ScoreSave::saveLocal(char* personName, int score)
 
         //se nao existir o arquivo, cria-se um novo ficheiro
         scores.push_back({personName, score});
-        for(int i = 0;i < 7;i++){scores.push_back({"NULL", 0});}
+        for(int i = 0;i < 7;i++){scores.push_back({"NULL",-1});}
 
         for(int i = 0; i < 8;i++)
         {

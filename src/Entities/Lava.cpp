@@ -13,5 +13,5 @@ void Lava::onUpdate()
 
 bool Lava::onColide(Ent* ent,int colIndex)
 {
-
+    return true;
 }

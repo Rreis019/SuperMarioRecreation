@@ -27,6 +27,9 @@ void Table::draw()
 
 		int textLength = defaultFont.getTextW(c.name);
 
+
+
+
 		defaultFont.draw(
 			x + TotalX + c.w / 2 - (textLength / 2), //centeredX
 			y + colSize / 2 - defaultFont.getTextH() / 2, //centeredY
@@ -47,8 +50,6 @@ void Table::draw()
 		//int ItemX = x + TotalX;
 		//int ItemY = y + TotalY + colSize;
 		//drawRect(renderer, ItemX, ItemY, cols[TotalCols].w, colSize, thickness, 255, 0, 0, 255); //border
-
-
 		defaultFont.draw(
 			x + TotalX + MarginLeftItem,
 			y + TotalY + headerSize + colSize / 2 - defaultFont.getTextH() / 2

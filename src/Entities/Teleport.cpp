@@ -110,10 +110,26 @@ bool Teleport::onColide(Ent* ent,int colIndex)
             isKeyDown(controller->controls->left) ? canTeleport = true : canTeleport = false;
             break;
         case DOWN:
-            isKeyDown(controller->controls->down) ? canTeleport = true : canTeleport = false;
+            if(isKeyDown(controller->controls->down))
+            {
+                canTeleport = true;
+                controller->pos.x = this->pos.x  + this->coliders[0].size.x/2 - controller->coliders[0].size.x/2;
+            } 
+            else{
+                canTeleport = false;
+            }
             break;
         case RIGHT:
-            isKeyDown(controller->controls->right) ? canTeleport = true : canTeleport = false;
+            if(isKeyDown(controller->controls->right)){
+                canTeleport = true;
+                //if player is in the air and is pressing right, teleport him to same y pos as teleport
+                controller->pos.y = this->pos.y + this->coliders[0].size.y - controller->coliders[0].size.y;
+                controller->changeSprite(0);
+            }
+            else{
+                canTeleport = false;
+            } 
+
             break;
     }
 

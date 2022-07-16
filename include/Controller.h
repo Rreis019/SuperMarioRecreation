@@ -77,7 +77,7 @@ class Controller : public LivingEnt
         void jumping();
         void init(char* characterName);
         std::vector<std::vector<Sprite>> sprites;
-        ControllerSizes controllerSize = CSMALL;
+        ControllerSizes controllerSize = CMEDIUM;
 };
 
 
